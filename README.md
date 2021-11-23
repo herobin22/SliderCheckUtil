@@ -98,6 +98,7 @@ boolean isSuccess = SliderCheckUtil.verifySlider(sliderCheck, distance);
   (1)背景图: 450x300px
   
   (2)滑块形状与阴影: 88x88px
+  
 2. App端图片尺寸(App请注意px与pt的转换)
 
   (1)背景图: 300x200px

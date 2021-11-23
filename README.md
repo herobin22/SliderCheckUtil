@@ -1,6 +1,8 @@
 # SliderCheckUtil--图片滑块验证码
 ### 背景
-在PC和App中, 常用图片滑块来做辅助验证, 如下图所示:![滑块验证码.png](https://upload-images.jianshu.io/upload_images/1646270-29a28514f2364a50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+在PC和App中, 常用图片滑块来做辅助验证, 如下图所示:
+
+![滑块验证码.png](https://upload-images.jianshu.io/upload_images/1646270-29a28514f2364a50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 分析
 #### 图片素材

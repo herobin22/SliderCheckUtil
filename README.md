@@ -1,28 +1,36 @@
 # SliderCheckUtil--图片滑块验证码
-### 背景
+## 背景
 在PC和App中, 常用图片滑块来做辅助验证, 如下图所示:![滑块验证码.png](https://upload-images.jianshu.io/upload_images/1646270-29a28514f2364a50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-### 分析
-##### 图片素材
+## 分析
+### 图片素材
 - 背景图片 
 - 滑块形状
 - 滑块阴影
-##### 后台
+### 后台
   **随机生成滑动的位置, 得到X,Y轴坐标(以左上角为原点), 根据图片素材与坐标**
+  
 (1)用滑块阴影覆盖实际滑块位置, 生成实际背景图片
+
 (2)将实际滑块位置图形与滑块形状重叠, 生成实际滑块形状图片
+
 **返回数据给前台**
+
 (1)实际背景图片以及其尺寸
+
 (2)实际滑块形状图片以及其尺寸
+
 (3)Y轴坐标, X轴用于校验 (后台校验则不返回, 由前台校验可返回)
-##### 前台
+### 前台
 显示背景图片, 根据Y轴坐标, 放置滑块位置, 添加滑动事件, 将滑块实际滑动的X轴距离进行校验
 
-###Java工具类使用
+## Java工具类使用
 - 滑块配置
-    1.将图片素材放到项目静态文件夹下, 如图:![图片素材.png](https://upload-images.jianshu.io/upload_images/1646270-bfaa5456650e2a95.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-  2.配置工具类中图片素材的数量与路径
+    1.将图片素材放到项目静态文件夹下, 如图:
+    
+    ![图片素材.png](https://upload-images.jianshu.io/upload_images/1646270-bfaa5456650e2a95.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+    
+    2.配置工具类中图片素材的数量与路径
 ```
 public class SliderCheckUtil {
     /**
@@ -83,21 +91,29 @@ SliderCheck sliderCheck = SliderCheckUtil.build();
 boolean isSuccess = SliderCheckUtil.verifySlider(sliderCheck, distance);
 ```
 
-### 备注
+## 备注
 - Demo提供两套切图, 分别为PC端和App端使用, 如尺寸不合适请自行切图
 1. PC端图片尺寸 
+
   (1)背景图: 450x300px
+  
   (2)滑块形状与阴影: 88x88px
 2. App端图片尺寸(App请注意px与pt的转换)
+
   (1)背景图: 300x200px
+  
   (2)滑块形状与阴影: 88x88px
 - 校验方式只根据X轴距离, 比较简单, 可自行增加校验方式提高安全性, 如:  
-(1)校验次数
-(2)超时失败
-(2)X轴加Y轴
-(3)加密如:MD5
 
-> 如果还有不懂的问题, 或者出现其它bug
-请查看Demo: [Demo](https://github.com/herobin22/SliderCheckUtil)
-简书地址:https://www.jianshu.com/p/1c208774e937
-或者给我留言, 喜欢的话, 就给作者一个star
+(1)校验次数
+
+(2)超时失败
+
+(3)X轴加Y轴
+
+(4)加密如:MD5
+
+* 如果还有不懂的问题, 或者出现其它bug
+* 请查看Demo: [Demo](https://github.com/herobin22/SliderCheckUtil)
+* 简书地址:https://www.jianshu.com/p/1c208774e937
+* 或者给我留言, 喜欢的话, 就给作者一个star

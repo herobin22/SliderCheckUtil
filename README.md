@@ -26,6 +26,7 @@
 
 ## Java工具类使用
 - 滑块配置
+
     1.将图片素材放到项目静态文件夹下, 如图:
     
     ![图片素材.png](https://upload-images.jianshu.io/upload_images/1646270-bfaa5456650e2a95.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
